@@ -1,0 +1,486 @@
+/* ==========================================================================
+   VARIÁVEIS DE CONFIGURAÇÃO (PALETA DE CORES ESPECÍFICA & TOQUES MODERNOS)
+   ========================================================================== */
+   :root {
+    --cinza-granito: #3A3F44;
+    --cinza-granito-dark: #2A2E32;
+    --lavanda-acinzen: #B5B3BE;
+    --lavanda-claro: #EBEAEE;
+    --verde-claro: #81C784;
+    --verde-deep: #2E7D32;
+    --azul-neon: #00E5FF;
+    --roxo: #6A1B9A;
+    --roxo-light: #F3E5F5;
+    
+    /* Configurações Globais Facilmente Customizáveis */
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fonte-rustica: 'Georgia', serif;
+    --borda-raio: 12px;
+    --borda-raio-sm: 6px;
+    --sombra-suave: 0 8px 24px rgba(0,0,0,0.08);
+    --sombra-hover: 0 12px 32px rgba(0,229,255,0.2);
+    --transicao: all 0.3s ease;
+    
+    /* Fontes Fluidas com clamp() */
+    --tamanho-h1: clamp(2.2rem, 5vw, 3.8rem);
+    --tamanho-h2: clamp(1.6rem, 3.5vw, 2.2rem);
+    --tamanho-body: clamp(1rem, 1vw + 0.5rem, 1.15rem);
+}
+
+/* Modo Escuro Customizado via Classe JS */
+body.dark-mode {
+    --cinza-granito: #F5F5F7;
+    --cinza-granito-dark: #FFFFFF;
+    --lavanda-acinzen: #3A3F44;
+    --lavanda-claro: #1E2225;
+    --verde-claro: #00E5FF;
+    --roxo-light: #2A1035;
+    background-color: #121416;
+    color: #E2E4E6;
+}
+
+/* Reset Geral e Acessibilidade */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    font-size: var(--tamanho-body);
+    line-height: 1.7;
+    background-color: #FAF9F6; /* Fundo rústico off-white texturizado visualmente */
+    color: var(--cinza-granito);
+    transition: var(--transicao);
+}
+
+/* ==========================================================================
+   CAIXA FLUTUANTE DE ACESSIBILIDADE (Canto Superior Esquerdo)
+   ========================================================================== */
+.acessibilidade-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.btn-acessibilidade-toggle {
+    background-color: var(--roxo);
+    color: white;
+    border: 2px solid var(--azul-neon);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicao);
+}
+
+.btn-acessibilidade-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--azul-neon);
+}
+
+.acessibilidade-menu {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    background: white;
+    border: 2px solid var(--lavanda-acinzen);
+    padding: 12px;
+    border-radius: var(--borda-raio);
+    margin-top: 8px;
+    box-shadow: var(--sombra-suave);
+}
+
+body.dark-mode .acessibilidade-menu {
+    background: #1E2225;
+}
+
+.acessibilidade-menu.ativo {
+    display: flex;
+}
+
+.acessibilidade-menu button {
+    background-color: var(--lavanda-claro);
+    color: var(--cinza-granito-dark);
+    border: none;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: var(--borda-raio-sm);
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transicao);
+}
+
+.acessibilidade-menu button:hover {
+    background-color: var(--roxo);
+    color: white;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+    position: relative;
+    min-height: 60vh;
+    background: linear-gradient(135deg, #2A2E32 0%, #1A1C1E 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Detalhe de textura combinando o rústico ao tecnológico */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(var(--azul-neon) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.15;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.hero-badge {
+    background-color: rgba(106, 27, 154, 0.4);
+    border: 1px solid var(--azul-neon);
+    color: var(--azul-neon);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: var(--fonte-rustica);
+    font-size: var(--tamanho-h1);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+    color: #FFFFFF;
+}
+
+.hero p {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--lavanda-claro);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   ESTRUTURA DE LAYOUT (GRID RESPONSIVO)
+   ========================================================================== */
+.main-container {
+    max-width: 2100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+/* Adaptação de layout para telas maiores (Desktop e Ultrawide) */
+@media (min-width: 1024px) {
+    .main-container {
+        grid-template-columns: 2.8fr 1.2fr;
+    }
+}
+
+/* ==========================================================================
+   BLOCOS RÚSTICOS E CARDS INFORMATIVOS
+   ========================================================================== */
+.bloco-rustico {
+    background: #FFFFFF;
+    border-top: 5px solid var(--roxo);
+    border-left: 1px solid rgba(0,0,0,0.05);
+    padding: clamp(20px, 4vw, 40px);
+    border-radius: var(--borda-raio);
+    box-shadow: var(--sombra-suave);
+    margin-bottom: 30px;
+    transition: var(--transicao);
+}
+
+body.dark-mode .bloco-rustico {
+    background: #1A1D20;
+    border-left-color: rgba(255,255,255,0.05);
+}
+
+.bloco-rustico h2, .bloco-rustico h3 {
+    font-family: var(--fonte-rustica);
+    color: var(--cinza-granito-dark);
+    margin-bottom: 20px;
+}
+
+.bloco-rustico h2 {
+    font-size: var(--tamanho-h2);
+    border-bottom: 2px solid var(--lavanda-claro);
+    padding-bottom: 10px;
+}
+
+.bloco-rustico p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.destaque-sustentavel {
+    background-color: var(--roxo-light);
+    border-left: 4px solid var(--verde-claro);
+    padding: 20px;
+    font-style: italic;
+    border-radius: 0 var(--borda-raio) var(--borda-raio) 0;
+}
+
+/* Grid de Cards */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.card-informativo {
+    background-color: var(--lavanda-claro);
+    padding: 24px;
+    border-radius: var(--borda-raio);
+    border-bottom: 4px solid transparent;
+    transition: var(--transicao);
+}
+
+body.dark-mode .card-informativo {
+    background-color: #24292D;
+}
+
+.card-informativo:hover {
+    transform: translateY(-5px);
+    border-bottom-color: var(--azul-neon);
+    box-shadow: var(--sombra-hover);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DAS IMAGENS (REQUISITOS ESPECÍFICOS)
+   ========================================================================== */
+.imagem {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Alinhamento counter/oposto padrão */
+}
+
+.imagem img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--borda-raio);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: var(--lavanda-acinzen); /* Placeholder visual elegante */
+    min-height: 250px; /* Garante estrutura visual mesmo vazia */
+    transition: var(--transicao);
+}
+
+/* Efeito Hover Suave Premium */
+.imagem img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(106, 27, 154, 0.25);
+    border-color: var(--azul-neon);
+}
+
+/* ==========================================================================
+   SEÇÕES EXPANSÍVEIS (ACCORDION VIA JS)
+   ========================================================================== */
+.accordion {
+    border: 1px solid var(--lavanda-acinzen);
+    border-radius: var(--borda-raio);
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.accordion-header {
+    width: 100%;
+    background-color: var(--cinza-granito);
+    color: white;
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transicao);
+}
+
+.accordion-header:hover {
+    background-color: var(--roxo);
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #FFF;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+}
+
+body.dark-mode .accordion-body {
+    background-color: #24292D;
+}
+
+.accordion-body p {
+    padding: 20px;
+    margin: 0;
+}
+
+/* ==========================================================================
+   BARRA LATERAL E FORMULÁRIO (À DIREITA)
+   ========================================================================== */
+.barra-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-inscricao {
+    background: linear-gradient(180deg, #FFFFFF 0%, var(--lavanda-claro) 100%);
+    border: 2px solid var(--lavanda-acinzen);
+    padding: 30px;
+    border-radius: var(--borda-raio);
+    box-shadow: var(--sombra-suave);
+    position: sticky;
+    top: 20px;
+}
+
+body.dark-mode .card-inscricao {
+    background: #1A1D20;
+}
+
+.card-inscricao h3 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: var(--roxo);
+    margin-bottom: 20px;
+}
+
+/* Elementos de Formulários Rústicos e Modernos */
+.grupo-campo {
+    margin-bottom: 18px;
+}
+
+.grupo-campo label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+.grupo-campo input, .grupo-campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--lavanda-acinzen);
+    border-radius: var(--borda-raio-sm);
+    background-color: white;
+    color: var(--cinza-granito-dark);
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    transition: var(--transicao);
+}
+
+body.dark-mode .grupo-campo input, body.dark-mode .grupo-campo textarea {
+    background-color: #24292D;
+    border-color: #3A3F44;
+    color: white;
+}
+
+.grupo-campo input:focus, .grupo-campo textarea:focus {
+    outline: none;
+    border-color: var(--azul-neon);
+    box-shadow: 0 0 8px rgba(0, 225, 255, 0.4);
+}
+
+.btn-moderno {
+    width: 100%;
+    background-color: var(--roxo);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 14px;
+    border: none;
+    border-radius: var(--borda-raio-sm);
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(106, 27, 154, 0.3);
+    transition: var(--transicao);
+}
+
+.btn-moderno:hover {
+    background-color: var(--verde-deep);
+    box-shadow: 0 6px 16px rgba(46, 125, 50, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   ÁREA DE COMENTÁRIOS E INTERAÇÃO
+   ========================================================================== */
+.area-comentarios textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.lista-comentarios {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comentario-item {
+    background: var(--lavanda-claro);
+    padding: 15px;
+    border-radius: var(--borda-raio-sm);
+    border-left: 4px solid var(--roxo);
+    animation: fadeIn 0.4s ease;
+}
+
+body.dark-mode .comentario-item {
+    background: #24292D;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+.rodape-principal {
+    background-color: var(--cinza-granito-dark);
+    color: var(--lavanda-acinzen);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-top: 4px solid var(--verde-claro);
+    font-size: 0.95rem;
+}
+
+/* Animações simples */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

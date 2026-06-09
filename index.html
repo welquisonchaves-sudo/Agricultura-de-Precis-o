@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultura de Precisão no Brasil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="acessibilidade-container" aria-label="Menu de Acessibilidade">
+        <button class="btn-acessibilidade-toggle" id="toggleAcessibilidade" aria-label="Abrir opções de acessibilidade">♿</button>
+        <div class="acessibilidade-menu" id="menuAcessibilidade">
+            <button id="btnAumentarFonte" title="Aumentar Fonte">Aumentar Fonte (+)</button>
+            <button id="btnDiminuirFonte" title="Diminuir Fonte">Diminuir Fonte (-)</button>
+            <button id="btnModoEscuro" title="Alternar Modo Escuro/Claro">Alternar Modo</button>
+            <button id="btnIniciarLeitura" title="Iniciar Leitura por Voz">Ouvir Conteúdo 🔊</button>
+            <button id="btnPararLeitura" title="Parar Leitura por Voz">Parar Leitura 🔇</button>
+        </div>
+    </div>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge">Tecnologia e Sustentabilidade</span>
+            <h1>Precisão da Agricultura</h1>
+            <p>Conectando a solidez da terra à inovação digital para moldar o futuro do agro nacional.</p>
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <main class="conteudo-principal" id="conteudoLer">
+            
+            <section class="bloco-rustico">
+                <h2>Agricultura de Precisão no Brasil</h2>
+                <p>Apesar da importância do Brasil no cenário agrícola, a agricultura de precisão ainda enfrenta dificuldades de adoção no país. Na área acadêmica, desde 2004, a cada 2 anos, é realizado o <strong>Congresso Brasileiro de Agricultura de Precisão (ConBAP)</strong>, que procura evidenciar a atual condição da AP no país e dá aos especialistas um rumo das metas futuras.</p>
+                
+                <div class="imagem"> <img src="img/foto1.png" alt="Campo agrícola moderno integrado com linhas de dados digitais flutuantes."> </div>
+                
+                <p>Inicialmente, o ConBAP era realizado e organizado pela Escola Superior de Agricultura “Luiz de Queiroz” (ESALQ) e, a partir de 2018, passou a ser organizado pela <strong>Associação Brasileira de Agricultura de Precisão e Digital (AsBraAP)</strong>, uma organização formada por universidades, instituições de ciência e tecnologia e empresas da iniciativa privada para fomentar o desenvolvimento, inovação e difusão das práticas, técnicas e tecnologias da agricultura de precisão e digital.</p>
+            </section>
+
+            <section class="bloco-rustico">
+                <h2>Inovações e Atuação da Embrapa</h2>
+                <p>A Embrapa tem contribuído ativamente com esse tema por meio de projetos de pesquisa originários da Rede de Agricultura de Precisão da Embrapa.</p>
+                
+                <div class="accordion">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Ver histórico e publicações da Rede (2009 - 2022)</span>
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-body">
+                        <p>A rede de pesquisa criada em 2009 permaneceu ativa até 2022, tendo como principais resultados uma renomada trilogia de livros lançados nos anos de 2010, 2014 e 2024. Atualmente, esses projetos estão estrategicamente vinculados ao portfólio de Transição Digital da empresa, impulsionando a eficiência no campo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bloco-rustico">
+                <h2>Expansão na Cadeia Canavieira</h2>
+                <p>As modernizações na cadeia canavieira nacional certamente implicarão em uma expansão exponencial da agricultura de precisão. Conheça os pilares desse avanço:</p>
+                
+                <div class="cards-grid">
+                    <div class="card-informativo">
+                        <div class="card-icon">🛸</div>
+                        <h3>Drones e Sensores</h3>
+                        <p>Uso de drones e sensores avançados para monitorar a saúde da lavoura em tempo real.</p>
+                    </div>
+                    <div class="card-informativo">
+                        <div class="card-icon">📊</div>
+                        <h3>Gestão de Dados</h3>
+                        <p>Softwares modernos de gestão de dados coletados diretamente no maquinário de campo.</p>
+                    </div>
+                    <div class="card-informativo">
+                        <div class="card-icon">🌱</div>
+                        <h3>Melhoramento Genético</h3>
+                        <p>Desenvolvimento focado de novas variedades para máxima adaptabilidade e resiliência.</p>
+                    </div>
+                    <div class="card-informativo">
+                        <div class="card-icon">🔄</div>
+                        <h3>Bioinsumos</h3>
+                        <p>Uso de bioinsumos e otimizações geradas pela colheita mecanizada da cana crua.</p>
+                    </div>
+                </div>
+
+                <div class="imagem"> <img src="img/foto2.png" alt="Sensores instalados em plantação de cana-de-açúcar coletando dados em tempo real."> </div>
+
+                <p class="destaque-sustentavel">
+                    Aliar a agricultura de precisão ao cultivo canavieiro manterá o Brasil como o maior produtor mundial de cana-de-açúcar e, sem dúvida, contribuirá para diminuir os impactos ambientais.
+                </p>
+            </section>
+
+            <section class="bloco-rustico area-comentarios">
+                <h3>Interação com o Leitor</h3>
+                <p>Deixe suas impressões ou dúvidas sobre o futuro do agro digital abaixo:</p>
+                <form id="formComentario" class="form-comentario">
+                    <div class="grupo-campo">
+                        <label for="txtComentario">Sua mensagem:</label>
+                        <textarea id="txtComentario" placeholder="Escreva aqui seu comentário com estilo rústico e acessível..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-moderno">Enviar Comentário</button>
+                </form>
+                <div class="lista-comentarios" id="listaComentarios">
+                    </div>
+            </section>
+
+            <section class="bloco-rustico referencias">
+                <h3>Referências Utilizadas</h3>
+                <ul>
+                    <li>
+                        <a href="https://www.embrapa.br/agencia-de-informacao-tecnologica/cultivos/cana-de-acucar/producao/avanco-tecnologico/agricultura-de-precisao" target="_blank" rel="noopener noreferrer">
+                            Embrapa - Avanço Tecnológico e Agricultura de Precisão na Cultura da Cana-de-Açúcar
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <aside class="barra-lateral">
+            <div class="card-inscricao">
+                <h3>Venha conhecer melhor a nossa escola do campo.</h3>
+                <p>Inscreva-se preenchendo os dados de nossa rede de polos:</p>
+                
+                <form id="formInscricao">
+                    <div class="grupo-campo">
+                        <label for="campoWelquison">Responsável Técnico / Aluno:</label>
+                        <input type="text" id="campoWelquison" value="Welquison" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="campoEscola">Escola do Campo:</label>
+                        <input type="text" id="campoEscola" value="escola" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="campoPalmital">Distrito / Localidade:</label>
+                        <input type="text" id="campoPalmital" value="palmital" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="campoParana">Estado:</label>
+                        <input type="text" id="campoParana" value="Paraná" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="campoBrasil">País:</label>
+                        <input type="text" id="campoBrasil" value="Brasil" required>
+                    </div>
+                    
+                    <button type="submit" class="btn-moderno btn-inscricao">Inscrever-se Agora</button>
+                </form>
+            </div>
+
+            <div class="imagem"> <img src="img/foto3.png" alt="Instalações modernas de uma escola técnica agrícola com laboratórios de campo."> </div>
+        </aside>
+
+    </div>
+
+    <footer class="rodape-principal">
+        <p>Agricultura de precisão © 2026 — Tecnologia, Inovação e Sustentabilidade no Campo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
